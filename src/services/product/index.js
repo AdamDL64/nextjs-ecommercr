@@ -24,6 +24,12 @@ export const getAllAdminProducts = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/admin/all-products", {
       method: "GET",
+      headers:{
+        "Access-Control-Allow-Headers" : "Content-Type",
+              "Access-Control-Allow-Origin": "*",
+            'Content-Type': 'application/json',
+             "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH"
+      },
       cache: "no-store",
     });
 
@@ -34,6 +40,8 @@ export const getAllAdminProducts = async () => {
     console.log(error);
   }
 };
+
+////sdfdsfsdfdsf
 
 export const updateAProduct = async (formData) => {
   try {
@@ -107,3 +115,4 @@ export const productById = async (id) => {
     console.log(e, "error productById");
   }
 };
+// sdfsdfsdf

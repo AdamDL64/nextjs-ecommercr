@@ -1,3 +1,4 @@
+'use server'
 import connectToDB from "@/database";
 import AuthUser from "@/middleware/AuthUser";
 import Address from "@/models/address";
